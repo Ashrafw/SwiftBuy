@@ -21,12 +21,12 @@ export const CatWrapper = styled.div`
       box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
       cursor: pointer;
       &:hover {
-        background-color: black;
+        background-color: rgba(3, 180, 168, 1);
         color: white;
       }
     }
     .selected {
-      background-color: rgba(23, 40, 98, 0.9);
+      background-color: rgba(3, 180, 168, 1);
     }
   }
 `;

@@ -30,7 +30,7 @@ const Cat = ({ setSelectedCat, selectedCat }: CatType) => {
             setSelectedCat((prev) => (prev === `men's clothing` ? "" : `men's clothing`))
           }
         >
-          "Men's clothing
+          Men's clothing
         </button>
         <button
           className={selectedCat === `women's clothing` ? "selected" : ""}

@@ -59,7 +59,8 @@ export const ProductItemWrapper = styled.div`
         text-align: center;
         color: rgba(0, 0, 0, 0.8);
         /* background-color: rgb(194, 222, 220); */
-        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0px 1px rgba(0, 0, 0, 0.2);
         padding: 4px;
         /* color: white; */
         /* width: 100%; */
@@ -68,6 +69,52 @@ export const ProductItemWrapper = styled.div`
       p {
         font-size: 14px;
         color: rgba(0, 0, 0, 0.7);
+      }
+    }
+    .info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 6px;
+      padding: 8px 20px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      &:hover {
+        background-color: black;
+        color: white;
+      }
+    }
+    .inner-modal {
+      position: absolute;
+      top: 0%;
+      left: 0%;
+      /* transform: translate(-50%, -50%); */
+      /* max-width: 900px; */
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .inner-inner {
+        position: relative;
+        background-color: white;
+        max-width: 900px;
+        .close {
+          color: rgba(0, 0, 0, 0.4);
+          cursor: pointer;
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          font-size: 32px;
+        }
+        padding: 20px;
+        box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
       }
     }
 
