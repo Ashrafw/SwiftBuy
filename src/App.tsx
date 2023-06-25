@@ -80,14 +80,17 @@ const App = () => {
   return (
     <div className="App">
       <Navbar cartItems={cartItems} setIsCartOpen={setIsCartOpen} />
-      <Cat setSelectedCat={setSelectedCat} selectedCat={selectedCat} />
-      {isCartOpen && (
-        <CartModal
-          cartItems={cartItems}
-          addToCart={handleAddToCart}
-          removeFromCart={handleRemoveFromCart}
-        />
-      )}
+      <div className="div">
+        <Cat setSelectedCat={setSelectedCat} selectedCat={selectedCat} />
+        {isCartOpen && (
+          <CartModal
+            cartItems={cartItems}
+            addToCart={handleAddToCart}
+            removeFromCart={handleRemoveFromCart}
+          />
+        )}
+      </div>
+
       <Wrapper>
         <div className="container">
           {data &&

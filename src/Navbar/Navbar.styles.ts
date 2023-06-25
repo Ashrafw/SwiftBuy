@@ -21,6 +21,7 @@ export const NavWrapper = styled.div`
       font-size: 32px;
       position: relative;
       color: rgb(22, 75, 96);
+      cursor: pointer;
       .amount {
         position: absolute;
         top: 0;

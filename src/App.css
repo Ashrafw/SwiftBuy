@@ -13,3 +13,10 @@
   background-color: rgba(27, 76, 97, 0.086);
   min-height: 100vh;
 }
+.div {
+  max-width: 1240px;
+  margin: 20px auto;
+  /* background-color: black; */
+  width: 95%;
+  position: relative;
+}

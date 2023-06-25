@@ -2,13 +2,15 @@ import styled from "styled-components";
 
 export const CatWrapper = styled.div`
   /* background-color: white; */
+  width: 100%;
+  margin: auto;
   .container {
-    width: 80%;
+    width: 100%;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    /* margin: 20px auto; */
     gap: 10px;
     button {
       width: 180px;
