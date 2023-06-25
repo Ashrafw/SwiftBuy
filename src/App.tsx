@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import axios from "axios";
+import { useQuery, QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Navbar from "./Navbar/Navbar";
 
-function App() {
+type Rating = {
+  rate: number;
+  count: number;
+};
+export type CartItem = {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: Rating;
+  amount: number;
+};
+
+type ProductsData = {
+  data: CartItem[];
+};
+
+const App = () => {
+  const fetchProducts = () => {
+    return axios.get("https://fakestoreapi.com/products/");
+  };
+  const fetchCategory = () => {
+    return axios.get("https://fakestoreapi.com/products/category/");
+  };
+
+  const { isLoading, isError, data, error } = useQuery({
+    queryKey: ["products"],
+    queryFn: fetchProducts,
+  });
+  console.log("data && data :>> ", data && data);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
     </div>
   );
-}
+};
 
 export default App;
